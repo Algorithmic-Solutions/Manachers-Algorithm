@@ -1,0 +1,24 @@
+{
+  "name": "manachers-algorithm",
+  "version": "1.0.0",
+  "description": "This repository explores the Manachers Algorithm, a powerful tool for finding palindromes in strings.  Two projects showcase its applications: an interactive game to test your palindrome skills and a professional-grade palindrome finder for text analysis.  Both leverage Manachers Algorithm for efficient palindrome detection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-mdy-m/Manachers-Algorithm.git"
+  },
+  "keywords": [
+    "manachers-algorithm",
+    "algorithms",
+    "algorithm"
+  ],
+  "author": "Mahdi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m-mdy-m/Manachers-Algorithm/issues"
+  },
+  "homepage": "https://github.com/m-mdy-m/Manachers-Algorithm#readme"
+}
