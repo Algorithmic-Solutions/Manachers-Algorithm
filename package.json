@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m-mdy-m/Manachers-Algorithm.git"
+    "url": "git+https://github.com/Algorithmic-Solutions/Manachers-Algorithm.git"
   },
   "keywords": [
     "manachers-algorithm",
@@ -18,7 +18,7 @@
   "author": "Mahdi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/m-mdy-m/Manachers-Algorithm/issues"
+    "url": "https://github.com/Algorithmic-Solutions/Manachers-Algorithm/issues"
   },
-  "homepage": "https://github.com/m-mdy-m/Manachers-Algorithm#readme"
+  "homepage": "https://github.com/Algorithmic-Solutions/Manachers-Algorithm#readme"
 }
