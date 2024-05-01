@@ -10,10 +10,9 @@ class PalindromeFinder {
     let words: string[] = this.text
       .split(/\s+/)
       .filter((word) => !stopwords.includes(word));
-    return words.join("");
+    return words.join(" ");
   }
-  manachers(): number[][] {
-    console.log("this.word:",this.word);
+  manachers(): string[] {
     const processed_text = `#${this.word.split("").join("#")}#`;
     let n = processed_text.length;
     let P = new Array(2*n+1).fill(0);
@@ -23,38 +22,34 @@ class PalindromeFinder {
       let i_mirror = 2 * center - i;
       if (i <= r) {
         P[i] = Math.min(r - i, P[i_mirror]);
-      } else {
-        P[i] = 0;
-      }
+      } 
       while (
-        i - P[i] - 1 >= 0 &&
-        i + P[i] + 1 < processed_text.length &&
-        processed_text[i - P[i] - 1] ===
-          processed_text[i + P[i] + 1]
-      ) {
+        processed_text[i + P[i] + 1] &&
+        processed_text[i - P[i] - 1] === processed_text[i + P[i] + 1]
+    ) {
         P[i]++;
-      }
+    }
       if (i + P[i] > r) {
         center = i;
         r = i + P[i];
       }
     }
-    const palindromes: number[][] = [];
-    for (let i = 1; i < processed_text.length - 1; i += 2) {
-      if (P[i] > 0) {
-        const startIndex = (i - P[i]) / 2;
-        const length = P[i];
-        palindromes.push([startIndex, length]);
-      }
+    const palindromes: string[] = [];
+    for (let i = 1; i < n - 1; i++) {
+        if (P[i] > 0) {
+            const startIndex = (i - P[i]) / 2;
+            const length = P[i];
+            palindromes.push(this.word.substr(startIndex, length));
+        }
     }
     return palindromes;
   }
   find_palindromes(): void {
-    const p = this.manachers();
-    console.log("p:", p);
+    const palindromes = this.manachers();
+    console.log("Palindromic Words:", palindromes);
   }
 }
-const text = "The quick brown fox jumps over the lazy dog.";
+const text = "The quick brown fox level jumps over the lazy dog.";
 
 // Create a PalindromeFinder object with the text
 const palindromeFinder = new PalindromeFinder(text);
