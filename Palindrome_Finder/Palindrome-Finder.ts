@@ -65,3 +65,14 @@ const palindromeFinder = new PalindromeFinder(text);
 palindromeFinder.find_palindromes();
 
 console.log("Original Text:", text);
+
+
+/** 
+ * @output ->
+┌─────────┬─────────────┬────────┬────────────┐
+│ (index) │ Start Index │ Length │ Palindrome │
+├─────────┼─────────────┼────────┼────────────┤
+│    0    │     13      │   5    │  'level'   │
+└─────────┴─────────────┴────────┴────────────┘
+ * 
+ */
