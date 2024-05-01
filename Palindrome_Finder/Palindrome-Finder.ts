@@ -36,7 +36,7 @@ class PalindromeFinder {
     }
     const palindromes: string[] = [];
     for (let i = 1; i < n - 1; i++) {
-        if (P[i] > 0) {
+        if (P[i] > 1) {
             const startIndex = (i - P[i]) / 2;
             const length = P[i];
             palindromes.push(this.word.substr(startIndex, length));
@@ -46,7 +46,14 @@ class PalindromeFinder {
   }
   find_palindromes(): void {
     const palindromes = this.manachers();
-    console.log("Palindromic Words:", palindromes);
+
+    console.table([
+      ...palindromes.map((palindrome) => ({
+        "Start Index": this.word.indexOf(palindrome),
+        Length: palindrome.length,
+        Palindrome: palindrome,
+      })),
+    ]);
   }
 }
 const text = "The quick brown fox level jumps over the lazy dog.";
