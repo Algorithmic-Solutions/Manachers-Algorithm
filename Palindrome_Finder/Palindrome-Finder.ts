@@ -10,7 +10,7 @@ class PalindromeFinder {
     let words: string[] = this.text
       .split(/\s+/)
       .filter((word) => !stopwords.includes(word));
-    return words.join(" ");
+    return words.join("");
   }
   manachers(): string[] {
     const processed_text = `#${this.word.split("").join("#")}#`;
