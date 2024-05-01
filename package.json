@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Algorithmic-Solutions/Manachers-Algorithm/issues"
   },
-  "homepage": "https://github.com/Algorithmic-Solutions/Manachers-Algorithm#readme"
+  "homepage": "https://github.com/Algorithmic-Solutions/Manachers-Algorithm#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
 }
