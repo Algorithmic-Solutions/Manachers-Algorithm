@@ -37,18 +37,19 @@ class PalindromeFinder {
   }
   find_palindromes():void {
     const p = this.manachers();
-    // console.log("p:", p);
-    console.log("Found Palindromes:")
-    console.log("| Start Index | Length | Palindrome |")
-    console.log("|-------------|--------|------------|")
-    for (let i = 0; i < p.length-1; i++) {
-        if (p[i]>0) {
-            let startIdx = i-p[i]
-            let palindrome = this.word.slice(startIdx,startIdx+2 * p[i]+1)
-            console.log(`| ${startIdx}           | ${p[i] * 2 + 1}      | ${palindrome} |`)
+    console.log("p:", p);
+    // console.log("Found Palindromes:")
+    // console.log("| Start Index | Length | Palindrome |")
+    // console.log("|-------------|--------|------------|")
+    // for (let i = 0; i < p.length-1; i++) {
+    //     if (p[i]>0) {
+    //         const startIdx = Math.floor((i - p[i]) / 2);
+    //         const length = p[i];
+    //         let palindrome = this.word.slice(startIdx,startIdx + length)
+    //         console.log(`| ${startIdx}           | ${length}      | ${palindrome} |`)
 
-        }        
-    }
+    //     }        
+    // }
   }
 }
 const text = "The quick brown fox jumps over the lazy dog.";
