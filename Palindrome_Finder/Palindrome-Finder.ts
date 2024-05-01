@@ -35,11 +35,20 @@ class PalindromeFinder {
     }
     return P;
   }
-  find_palindromes() {
+  find_palindromes():void {
     const p = this.manachers();
-    console.log("p:", p);
+    // console.log("p:", p);
+    console.log("Found Palindromes:")
+    console.log("| Start Index | Length | Palindrome |")
+    console.log("|-------------|--------|------------|")
+    for (let i = 0; i < p.length-1; i++) {
+        if (p[i]>0) {
+            let startIdx = i-p[i]
+            let palindrome = this.word.slice(startIdx,startIdx+2 * p[i]+1)
+            console.log(`| ${startIdx}           | ${p[i] * 2 + 1}      | ${palindrome} |`)
 
-    return palindromes;
+        }        
+    }
   }
 }
 const text = "The quick brown fox jumps over the lazy dog.";
@@ -47,11 +56,7 @@ const text = "The quick brown fox jumps over the lazy dog.";
 // Create a PalindromeFinder object with the text
 const palindromeFinder = new PalindromeFinder(text);
 
-// Call the manachers function to find palindrome lengths
-const P = palindromeFinder.manachers();
-
 // Call the PalindromeExtraction function to extract palindromes
-const palindromes = palindromeFinder.find_palindromes();
+palindromeFinder.find_palindromes();
 
 console.log("Original Text:", text);
-console.log("Extracted Palindromes:", palindromes);
