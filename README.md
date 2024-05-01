@@ -9,7 +9,7 @@ The Manachers Algorithm efficiently determines the length of the longest palindr
 **Project Implementations:**
 
 * **Interactive Palindrome Game:** -> [Implementation and explanation]()
-* **Palindrome Finder:** -> [Implementation and explanation]()
+* **Palindrome Finder:** -> [Implementation and explanation](https://github.com/Algorithmic-Solutions/Manachers-Algorithm/tree/main/Palindrome_Finder)
 
 **Contribution and Future Development:**
 
